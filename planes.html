@@ -1,29 +1,66 @@
+```html
+// filepath: c:\Users\lucas\OneDrive\Documentos\BodyStrong\BodyGYM\planes.html
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Body Strong | Planes</title>
+  <meta name="description"
+        content="Descubre los planes disponibles en Body Strong Talca: grupal, semi‑asistido y personalizado." />
+  <meta name="keywords"
+        content="gimnasio, Talca, Body Strong, planes, grupos, semi asistido, personalizado" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.bodystrongtalca.cl/planes.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Body Strong | Planes" />
+  <meta property="og:description"
+        content="Conoce los cupos y tarifas de nuestros planes grupal, semi asistido y personalizado." />
+  <meta property="og:image"
+        content="https://www.bodystrongtalca.cl/3.avif" />
+  <meta property="og:url" content="https://www.bodystrongtalca.cl/planes.html" />
+  <meta property="og:site_name" content="Body Strong Talca" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Body Strong | Planes" />
+  <meta name="twitter:description"
+        content="Conoce los cupos y tarifas de nuestros planes grupal, semi asistido y personalizado." />
+  <meta name="twitter:image"
+        content="https://www.bodystrongtalca.cl/3.avif" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700&display=swap" />
   <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+        rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <nav class="glass-nav">
+  <nav class="glass-nav" aria-label="Navegación principal">
     <div class="logo">BODY<span>STRONG</span></div>
-    <ul class="menu">
+    <button class="menu-toggle" aria-label="Abrir menú" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="menu" id="navMenu">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="planes.html" class="active-link">Planes</a></li>
       <li><a href="cuenta.html">Mi Cuenta</a></li>
-      <li><a href="https://www.instagram.com/bodystronglasrastras/" target="_blank" class="btn-nav">Instagram</a></li>
+      <li><a href="https://www.instagram.com/bodystronglasrastras/" target="_blank" rel="noopener"
+             class="btn-nav">Instagram</a></li>
     </ul>
   </nav>
+
   <section class="page-hero">
     <h1>PLANES Y <span>CUPOS</span></h1>
     <p>Elige tu plan y reserva tu cupo.</p>
   </section>
+
   <section class="planes-container">
     <div class="grid-planes">
       <div class="card">
@@ -33,7 +70,8 @@
           <div class="progress-bar">
             <div class="fill" style="width: 40%;"></div>
           </div>
-        </div> <button class="btn-card">Inscribirme</button>
+        </div>
+        <button class="btn-card">Inscribirme</button>
       </div>
       <div class="card popular">
         <div class="popular-tag">MÁS POPULAR</div>
@@ -43,7 +81,8 @@
           <div class="progress-bar">
             <div class="fill alert" style="width: 20%;"></div>
           </div>
-        </div> <button class="btn-card active">Inscribirme</button>
+        </div>
+        <button class="btn-card active">Inscribirme</button>
       </div>
       <div class="card">
         <h3>PERSONALIZADO</h3>
@@ -52,10 +91,41 @@
           <div class="progress-bar">
             <div class="fill" style="width: 100%;"></div>
           </div>
-        </div> <button class="btn-card">Contactar</button>
+        </div>
+        <button class="btn-card">Contactar</button>
       </div>
     </div>
   </section>
-</body>
 
+  <footer class="footer">
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <div class="logo">BODY<span>STRONG</span></div>
+        <p>Avenida Las Rastras 1545, Talca.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="planes.html">Planes</a>
+        <a href="cuenta.html">Mi Cuenta</a>
+        <a href="https://maps.google.com/?q=Body+Strong+Las+Rastras+Talca" target="_blank" rel="noopener">
+          Ubicación
+        </a>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://www.instagram.com/bodystronglasrastras/" target="_blank" rel="noopener">
+          Instagram
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span id="year"></span> Body Strong. Todos los derechos reservados.</div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
 </html>

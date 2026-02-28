@@ -1,33 +1,66 @@
+```html
+// filepath: [index.html](http://_vscodecontentref_/0)
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO básico -->
   <title>Body Strong | Inicio</title>
+  <meta name="description"
+    content="Gimnasio Body Strong en Talca. Horarios, planes y resultados reales. Grupal, semi‑asistido y personalizado." />
+  <meta name="keywords" content="gimnasio, Talca, Body Strong, entrenamiento, bodycombat, bodypump, funcional" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.bodystrongtalca.cl/index.html" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Body Strong | Inicio" />
+  <meta property="og:description" content="Entrena en Talca con Body Strong: grupos, semi asistido y personalizados." />
+  <meta property="og:image" content="https://www.bodystrongtalca.cl/3.avif" />
+  <meta property="og:url" content="https://www.bodystrongtalca.cl/index.html" />
+  <meta property="og:site_name" content="Body Strong Talca" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Body Strong | Inicio" />
+  <meta name="twitter:description"
+    content="Entrena en Talca con Body Strong: grupos, semi asistido y personalizados." />
+  <meta name="twitter:image" content="https://www.bodystrongtalca.cl/3.avif" />
+
+  <!-- rendimiento: preconnect / preload / fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700&display=swap" />
   <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
+  <link rel="preload" as="image" href="hero-bg.jpg" />
 
-  <link rel="stylesheet" href="style.css">
+  <!-- versión minificada del CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
-  <nav class="glass-nav">
+  <nav class="glass-nav" aria-label="Navegación principal">
     <div class="logo">BODY<span>STRONG</span></div>
-    <ul class="menu">
+    <button class="menu-toggle" aria-label="Abrir menú" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="menu" id="navMenu">
       <li><a href="index.html" class="active-link">Inicio</a></li>
       <li><a href="planes.html">Planes</a></li>
       <li><a href="cuenta.html">Mi Cuenta</a></li>
-      <li><a href="https://www.instagram.com/bodystronglasrastras/" target="_blank" rel="noopener"
-          class="btn-nav">Instagram</a></li>
+      <li><a href="https://www.instagram.com/bodystronglasrastras/" target="_blank" rel="noopener" class="btn-nav"
+          aria-label="Visitar Instagram de Body Strong">Instagram</a></li>
     </ul>
   </nav>
 
-  <header class="hero">
+  <header class="hero" role="banner">
     <div class="hero-text">
       <span class="tagline">TALCA, CHILE</span>
       <h1>SUPERA TUS <span>LÍMITES</span></h1>
@@ -43,7 +76,7 @@
 
   <section class="horarios-info">
     <div class="insta-head">
-      <h2>CLASES <span>GRUPALES</span></h2>
+      <h2>HORARIO <span>BODY STRONG</span></h2>
     </div>
     <div class="horarios-grid">
       <div class="horario-item">
@@ -63,19 +96,20 @@
 
   <section class="clases-grupales">
     <div class="insta-head">
-      <h2>HORARIO <span>BODY STRONG</span></h2>
+      <h2>CLASES <span>GRUPALES</span></h2>
+
     </div>
     <div class="tabla-wrapper">
       <table class="horarios-table">
         <thead>
           <tr>
-            <th>Hora</th>
-            <th>Lunes</th>
-            <th>Martes</th>
-            <th>Miércoles</th>
-            <th>Jueves</th>
-            <th>Viernes</th>
-            <th>Sábado</th>
+            <th scope="col">Hora</th>
+            <th scope="col">Lunes</th>
+            <th scope="col">Martes</th>
+            <th scope="col">Miércoles</th>
+            <th scope="col">Jueves</th>
+            <th scope="col">Viernes</th>
+            <th scope="col">Sábado</th>
           </tr>
         </thead>
         <tbody>
@@ -120,6 +154,58 @@
     </div>
   </section>
 
+
+  <!-- Equipo de ayuda -->
+  <section class="insta-section" id="equipo">
+    <div class="insta-head">
+      <h2>EQUIPO <span>DE AYUDA</span></h2>
+      <p>Conoce a nuestro equipo: entrenadores y personal de apoyo.</p>
+    </div>
+
+    <div class="insta-grid">
+      <div class="insta-card">
+        <img src="per1.jpg" alt="María López — Entrenadora" loading="lazy">
+        <div class="insta-overlay">
+          <div>
+            <span>María López — Entrenadora</span>
+            <p style="font-size:.8rem;margin-top:6px;">Especialista en entrenamiento funcional y nutrición deportiva.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insta-card">
+        <img src="per2.jpg" alt="Carlos Pérez — Coach" loading="lazy">
+        <div class="insta-overlay">
+          <div>
+            <span>Carlos Pérez — Coach</span>
+            <p style="font-size:.8rem;margin-top:6px;">Entrenamiento grupal y seguimiento personalizado.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insta-card">
+        <img src="per3.jpg" alt="Ana Torres — Asistente" loading="lazy">
+        <div class="insta-overlay">
+          <div>
+            <span>Ana Torres — Asistente</span>
+            <p style="font-size:.8rem;margin-top:6px;">Soporte en sala y coordinación de horarios.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insta-card">
+        <img src="per4.jpg" alt="Jorge Martínez — Profesor" loading="lazy">
+        <div class="insta-overlay">
+          <div>
+            <span>Jorge Martínez — Profesor</span>
+            <p style="font-size:.8rem;margin-top:6px;">Especialista en fuerza y técnica de levantamiento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="insta-section" id="instagram">
     <div class="insta-head">
       <h2>IG <span>BODY STRONG</span></h2>
@@ -131,35 +217,34 @@
 
     <div class="insta-grid">
       <a class="insta-card" href="https://www.instagram.com/bodystronglasrastras/" target="_blank" rel="noopener">
-        <img src="1.jpg" alt="Body Strong Instagram 1">
+        <img src="1.jpg" alt="Entrenamiento en Body Strong" loading="lazy">
         <div class="insta-overlay">
           <span>Entrenamientos</span>
         </div>
       </a>
 
       <a class="insta-card" href="https://www.instagram.com/bodystronglasrastras/" target="_blank" rel="noopener">
-        <img src="2.jpg" alt="Body Strong Instagram 2">
+        <img src="2.jpg" alt="Clase grupal de Body Strong" loading="lazy">
         <div class="insta-overlay">
           <span>Clases grupales</span>
         </div>
       </a>
 
       <a class="insta-card" href="https://www.instagram.com/bodystronglasrastras/" target="_blank" rel="noopener">
-        <img src="3.avif" alt="Body Strong Instagram 3">
+        <img src="3.avif" alt="Resultados de miembros de Body Strong" loading="lazy">
         <div class="insta-overlay">
           <span>Resultados</span>
         </div>
       </a>
 
       <a class="insta-card" href="https://www.instagram.com/bodystronglasrastras/" target="_blank" rel="noopener">
-        <img src="4.avif" alt="Body Strong Instagram 4">
+        <img src="4.avif" alt="Promociones de Body Strong" loading="lazy">
         <div class="insta-overlay">
           <span>Promos</span>
         </div>
       </a>
     </div>
   </section>
-
 
   <footer class="footer">
     <div class="footer-wrap">
@@ -172,11 +257,15 @@
         <a href="index.html">Inicio</a>
         <a href="planes.html">Planes</a>
         <a href="cuenta.html">Mi Cuenta</a>
-        <a href="https://maps.google.com/?q=Body+Strong+Las+Rastras+Talca" target="_blank" rel="noopener">Ubicación</a>
+        <a href="https://maps.google.com/?q=Body+Strong+Las+Rastras+Talca" target="_blank" rel="noopener">
+          Ubicación
+        </a>
       </div>
 
       <div class="footer-social">
-        <a href="https://www.instagram.com/bodystronglasrastras/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.instagram.com/bodystronglasrastras/" target="_blank" rel="noopener">
+          Instagram
+        </a>
       </div>
     </div>
     <div class="footer-bottom">© <span id="year"></span> Body Strong. Todos los derechos reservados.</div>
@@ -186,6 +275,7 @@
     </script>
   </footer>
 
+  <script src="app.js" defer></script>
 </body>
 
 </html>
