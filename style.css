@@ -1005,3 +1005,30 @@ body {
     align-items: flex-start;
   }
 }
+
+/* Very small screens: tighten nav/menu spacing */
+@media (max-width: 420px) {
+  .glass-nav {
+    padding: 8px 4%;
+  }
+
+  .logo { font-size: 0.95rem; }
+
+  .menu-toggle {
+    min-width: 36px;
+    min-height: 36px;
+    padding: 6px 8px;
+  }
+
+  .menu {
+    left: 4%;
+    right: 4%;
+    top: calc(100% + 4px);
+  }
+
+  .menu a {
+    padding: 10px 12px;
+    font-size: 0.88rem;
+    min-height: 40px;
+  }
+}
