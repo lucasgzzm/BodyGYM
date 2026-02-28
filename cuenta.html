@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Body Strong | Mi Cuenta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="glass-nav">
+    <div class="logo">BODY<span>STRONG</span></div>
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="planes.html">Planes</a></li>
+      <li><a href="cuenta.html" class="active-link">Mi Cuenta</a></li>
+      <li><a href="https://www.instagram.com/bodystronglasrastras/" target="_blank" class="btn-nav">Instagram</a></li>
+    </ul>
+  </nav>
+  <section class="page-hero">
+    <h1>MI <span>CUENTA</span></h1>
+    <p>Revisa tu matrícula y días restantes.</p>
+  </section>
+  <section class="cuenta-section">
+    <h2>ACCESO <span>CLIENTE</span></h2>
+    <div class="cuenta-card">
+      <div class="cuenta-grid-2">
+        <div class="cuenta-item">
+          <h4 class="mini-title">Crear cuenta</h4> <input id="regName" placeholder="Nombre" class="input-dark"> <input
+            id="regEmail" placeholder="Email" type="email" class="input-dark"> <input id="regPass"
+            placeholder="Contraseña (min 6)" type="password" class="input-dark"> <button class="btn-card active"
+            id="btnRegister">Registrarme</button>
+        </div>
+        <div class="cuenta-item">
+          <h4 class="mini-title">Iniciar sesión</h4> <input id="logEmail" placeholder="Email" type="email"
+            class="input-dark"> <input id="logPass" placeholder="Contraseña" type="password" class="input-dark"> <button
+            class="btn-card active" id="btnLogin">Entrar</button> <button class="btn-card" id="btnLogout"
+            style="margin-top:10px;">Cerrar sesión</button>
+        </div>
+      </div>
+      <p id="authMsg" class="cuenta-note"></p>
+    </div>
+  </section>
+  <section class="cuenta-section">
+    <h2>ESTADO <span>DE MATRÍCULA</span></h2>
+    <div class="cuenta-card">
+      <div class="cuenta-top">
+        <div>
+          <p class="cuenta-label">Cliente</p>
+          <h3 id="cuentaNombre">Invitado</h3>
+        </div>
+        <div class="badge-plan" id="cuentaPlan">Sin plan</div>
+      </div>
+      <div class="cuenta-grid">
+        <div class="cuenta-item">
+          <p class="cuenta-label">Vence</p>
+          <p class="cuenta-value" id="cuentaVence">—</p>
+        </div>
+        <div class="cuenta-item">
+          <p class="cuenta-label">Días restantes</p>
+          <p class="cuenta-value" id="cuentaDias">—</p>
+        </div>
+        <div class="cuenta-item">
+          <p class="cuenta-label">Estado</p>
+          <p class="cuenta-value" id="cuentaEstado">—</p>
+        </div>
+      </div>
+      <div class="cuenta-bar">
+        <div class="cuenta-bar-fill" id="cuentaBarFill" style="width:0%"></div>
+      </div>
+      <p class="cuenta-note">*Esto se carga desde tu API con SQL Server.</p>
+    </div>
+  </section>
+  <script src="app.js"></script>
+</body>
+
+</html>
