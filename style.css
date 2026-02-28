@@ -13,17 +13,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--dark);
-  color: white;
-  overflow-x: hidden;
-}
-
 /* NAV */
 .glass-nav {
   position: fixed;
@@ -417,7 +406,7 @@ body {
     list-style: none;
     z-index: 999;
     border-bottom: 2px solid var(--primary);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
   }
 
   .menu.active {
@@ -434,49 +423,6 @@ body {
       opacity: 1;
       transform: translateY(0);
     }
-  }
-
-  .menu {
-    display: none;
-    position: absolute;
-    top: calc(100% + 6px);
-    left: 6%;
-    right: 6%;
-    flex-direction: column;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.98), rgba(15, 15, 15, 0.95));
-    padding: 8px 0;
-    gap: 0;
-    list-style: none;
-    z-index: 999;
-    border-bottom: 2px solid var(--primary);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
-  }
-
-  .menu.active {
-    display: flex;
-    animation: slideDown 0.22s ease-out;
-  }
-
-  /* Overlay that appears when mobile menu is open */
-  .nav-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
-    z-index: 950;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.18s ease;
-  }
-
-  .nav-overlay.active {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  /* Prevent background scroll when mobile menu is open */
-  body.no-scroll {
-    overflow: hidden;
-    height: 100vh;
   }
 
   .menu li {
